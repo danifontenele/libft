@@ -6,21 +6,11 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 22:41:54 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/22 00:58:59 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/23 17:39:55 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
 
 /**
  * @brief size-bounded string concatenation
@@ -58,7 +48,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 
-/*
+/* 
 int	main()
 {
 	char buffer[10] = "ABCDEFG";
@@ -67,8 +57,8 @@ int	main()
 	
 	printf("Antes: buffer = \"%s\"\n", buffer);
 	
-	result = ft_strlcat(buffer, to_add, 10);
+	result = ft_strlcat(buffer, to_add, 12);
 
 	printf("Depois: buffer = \"%s\"\n", buffer);
 	printf("Retorno de ft_strlcat: %zu\n", result);
-}*/
+} */

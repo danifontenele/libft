@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 01:22:04 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/23 02:18:41 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/23 18:26:02 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  * 
  * The allocated memory is filled with bytes with value zero.
  * @param count quantity of bytes needed in the specific case.
- * @param size bytes of memory to allocate.
+ * @param size size of the type.
  * @return If successful, calloc() returns a pointer to the 
  * allocated memory. If there's an error, they return a NULL
  * pointer and set errno to ENOMEN.

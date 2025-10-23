@@ -6,21 +6,11 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:32:28 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/22 21:42:39 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/23 18:17:34 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
 
 /**
  * @brief function that copy strings.
@@ -38,7 +28,7 @@ size_t	ft_strlen(const char *str)
  * @return Returns the total length of the strings it tried to
  * create.
  */
-size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
 	size_t	i;
@@ -58,15 +48,15 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 	return (src_len);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
 	char s[] = "abcd";
-	char d[27];
+	char d[] = "12345";
 	size_t retorno;
 
-	retorno = ft_strlcpy(NULL, s, sizeof(char) * 10);
+	retorno = ft_strlcpy(d, s, sizeof(char) * 10);
 	d[9] = '\0';
 	
 	printf("d: %s\n", d);
 	printf("Retorno: %zu\n", retorno);
-}*/
+} */
