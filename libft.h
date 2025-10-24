@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 20:26:04 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/23 18:17:04 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/24 18:07:02 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 /* Part2 Additional functions */
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(const char *s1, const char *set);
+char	*ft_itoa(int n);
 
 #endif
