@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:32:28 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/23 18:17:34 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/26 21:45:27 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 
-	if (!src || !dst)
-		return (0);
 	src_len = ft_strlen(src);
 	if (dstsize == 0)
 		return (src_len);

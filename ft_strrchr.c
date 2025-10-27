@@ -6,21 +6,11 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:44:08 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/23 00:18:24 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/26 23:41:18 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	int	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
 
 /**
  * @brief This function returns a pointer to the last occurrence of 
@@ -51,8 +41,8 @@ char	*ft_strrchr(const char *s, int c)
 		return (&str[i]);
 	return (last);
 }
-
-/* int main(void)
+/* 
+int main(void)
 {
 	char tweet[] = "@This is my @mention";
 

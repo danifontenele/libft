@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:04:38 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/24 18:05:38 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/26 21:32:41 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char	*ft_itoa(int n)
 	nbr = n;
 	len = intlen(nbr);
 	result = allocation(len);
+	if (!result)
+		return (NULL);
 	if (nbr < 0)
 	{
 		result[0] = '-';

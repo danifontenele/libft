@@ -6,13 +6,13 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:08:14 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/17 16:47:10 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:58:21 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	nb;
 	int	signal;

@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:52:21 by calvasub          #+#    #+#             */
-/*   Updated: 2025/10/23 16:33:42 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/26 22:01:46 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /**
  * @brief Extract a substring from a string.
  * 
- * Allocasub memory and returns a substring 's'.
+ * Allocate memory and returns a substring 's'.
  * The substring starts at index 'start' and has
  * a maximum length of 'len'.
  * 
@@ -31,7 +31,13 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*sub;
 
-	sub = (char *)malloc(sizeof(s) * (len + 1));
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
 	i = 0;
@@ -44,13 +50,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-
-/* int	main(void)
-{
-	char	*str = "This is just a test string Dont Panic!";
-	char	*sub;
-
-	sub = ft_substr(str, 27, 11);
-	printf("substring: \"%s\"\n", sub);
-	printf("%s\n", ft_substr("Bonjour comment ca va?", 5, 8));
-} */

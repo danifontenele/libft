@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 01:22:04 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/23 18:26:02 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:52:05 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,23 @@
  */
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	unsigned char	*ptr;
+	size_t			i;
 
 	ptr = (void *)malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, count);
+	i = 0;
+	while (i < count * size)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 	return (ptr);
 }
 
-/* int	main(void)
+/* 
+int	main(void)
 {
 	int *arr;
 	size_t n = 10;
@@ -61,4 +68,4 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	free (arr);
 	return (0);
-} */
+}  */

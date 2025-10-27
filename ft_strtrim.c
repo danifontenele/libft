@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:53:29 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/24 19:47:25 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/26 22:07:22 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	i;
 	char	*new_str;
 
-	if (!s1)
-		return (ft_strdup(""));
+	if (!s1 || !set)
+		return (NULL);
 	first = countleft(s1, set);
 	if (ft_strlen(s1) == 0)
 		last = 0;
@@ -88,7 +88,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 		last = countright(s1, set);
 	if (first > last)
 		return (ft_strdup(""));
-	new_str = malloc(sizeof(char) * (last - first + 1 + 1));
+	new_str = malloc(sizeof(char) * (last - first + 2));
 	if (!new_str)
 		return (NULL);
 	i = 0;
@@ -97,8 +97,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-/* int	main()
+/* 
+int	main()
 {
 	char *trimmed;
 
