@@ -6,104 +6,96 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:16:22 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/30 23:40:36 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/31 19:32:58 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	word_count(const char *str, char sep)
+static	size_t	word_count(const char *s, char sep)
 {
 	size_t	wcounter;
 	size_t	i;
 
 	wcounter = 0;
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if ((str[i] != sep && str[i + 1] == sep)
-			|| (str[i] != sep && str[i + 1] == '\0'))
+		if ((s[i] != sep && (s[i + 1] == sep || s[i + 1] == '\0')))
 			wcounter++;
 		i++;
 	}
 	return (wcounter);
 }
 
-static	size_t	word_len(const char *str, char sep)
+static void	*free_all(char **substr, size_t n)
 {
-	size_t	len;
 	size_t	i;
 
 	i = 0;
-	len = 0;
-	while (str[i])
+	while (i < n)
 	{
-		if (str[i] == sep)
-			i++;
-		len++;
+		free(substr[i]);
 		i++;
 	}
-	return (len);
+	free(substr);
+	return (NULL);
 }
 
-static char	**word_dup(const char *str, char sep, char **substr)
+static char	**ft_split_util(const char *s, char sep, char **subs)
 {
 	size_t	i;
+	size_t	start;
 	size_t	j;
-	size_t	k;
 
-	j = 0;
+	start = 0;
 	i = 0;
-	k = 0;
-	while (str[i])
+	j = 0;
+	while (s[i])
 	{
-		if ((i == 0 && str[i] != sep)
-			|| (i > 0 && str[i] != sep && str[i - 1] == sep))
-			j = i;
-		while (str[j] != sep && str[j] != '\0')
+		if (s[i] != sep)
 		{
-			if (str[j + 1] == sep || str[j + 1] == '\0')
-			{
-				substr[k] = ft_substr(str, i, (j - i) + 1);
-				k++;
-			}
+			start = i;
+			while (s[i] != sep && s[i] != '\0')
+				i++;
+			subs[j] = ft_substr(s, start, (i - start));
+			if (!subs[j])
+				return (free_all(subs, j));
 			j++;
 		}
-		i++;
+		else
+			i++;
 	}
-	substr[k] = NULL;
-	return (substr);
+	subs[j] = NULL;
+	return (subs);
 }
 
-char	**ft_split(const char *str, char sep)
+char	**ft_split(const char *s, char sep)
 {
-	size_t	nwords;
-	size_t	wordslen;
-	char	**substr;
+	char	**result;
 
-	nwords = word_count(str, sep);
-	wordslen = word_len(str, sep);
-	substr = malloc(sizeof(char *) * (nwords + 1));
-	if (!substr)
+	if (!s)
 		return (NULL);
-	substr = word_dup(str, sep, substr);
-	return (substr);
+	result = malloc(sizeof(char *) * (word_count(s, sep) + 1));
+	if (!result)
+		return (NULL);
+	result = ft_split_util(s, sep, result);
+	return (result);
 }
 
 /* int	main(int ac, char **av)
 {
 	char	**splitted;
 	char	sep = (char) * av[2];
-	char	*str = av[1];
+	char	*s = av[1];
 
-	splitted = ft_split(str, sep);
+	splitted = ft_split(s, sep);
 	int	i = 0;
-	while (i < word_count(str, sep))
+	while (i < word_count(s, sep))
 	{
 		printf("%s\n", splitted[i]);
 		i++;
 	}
-	printf("number of words: %lu\n", word_count(str, sep));
-	free (!splitted);
+	printf("number of words: %lu\n", word_count(s, sep));
 	return (0);
-} */
+}  */
