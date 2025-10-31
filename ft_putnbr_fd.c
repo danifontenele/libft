@@ -6,15 +6,12 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 22:16:02 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/26 22:37:03 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:27:02 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Writes the int 'n' on the file descriptor fd.
- */
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;

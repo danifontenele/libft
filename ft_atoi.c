@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:08:14 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/26 20:58:21 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:25:03 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * signal);
 }
-
-/*
-int main(void)
-{
-	printf("%i\n", ft_atoi("-54"));
-    printf("%i\n", ft_atoi("+48"));
-	printf("%i\n", ft_atoi("-47"));
-	printf("%i\n", ft_atoi("+47"));
-}*/

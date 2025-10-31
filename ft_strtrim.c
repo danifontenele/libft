@@ -6,16 +6,16 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:53:29 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/26 22:07:22 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/31 00:39:38 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	countleft(const char *s1, const char *set)
+static int	countleft(const char *s1, const char *set)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (s1[i])
@@ -34,11 +34,11 @@ static size_t	countleft(const char *s1, const char *set)
 	return (i);
 }
 
-static size_t	countright(const char *s1, const char *set)
+static int	countright(const char *s1, const char *set)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	int	i;
+	int	j;
+	int	len;
 
 	len = ft_strlen(s1);
 	if (len == 0)
@@ -74,29 +74,22 @@ static size_t	countright(const char *s1, const char *set)
  */
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	size_t	first;
-	size_t	last;
-	size_t	i;
+	int		first;
+	int		last;
+	int		n;
 	char	*new_str;
 
 	if (!s1 || !set)
 		return (NULL);
 	first = countleft(s1, set);
-	if (ft_strlen(s1) == 0)
-		last = 0;
-	else
-		last = countright(s1, set);
+	last = countright(s1, set);
 	if (first > last)
 		return (ft_strdup(""));
-	new_str = malloc(sizeof(char) * (last - first + 2));
-	if (!new_str)
-		return (NULL);
-	i = 0;
-	while (first <= last)
-		new_str[i++] = s1[first++];
-	new_str[i] = '\0';
+	n = last - first + 1;
+	new_str = ft_substr(s1, first, n);
 	return (new_str);
 }
+
 /* 
 int	main()
 {

@@ -6,23 +6,12 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 15:18:44 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/23 15:49:53 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:27:33 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Save a copy of a string.
- * 
- * Returns a pointer to a new string which is a 
- * duplicate of the string s. Memory for the new string 
- * obtained with malloc, can be freed with free.
- * 
- * @return On succes, returns a pointer to the duplicated
- * string. Otherwise, it returns NULL if insufficient 
- * memory was avaliable.
- */
 char	*ft_strdup(const char *s)
 {
 	char	*new_str;
@@ -40,13 +29,3 @@ char	*ft_strdup(const char *s)
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-/* int	main(void)
-{
-	char *str = "This is a string to be copied";
-	char *dst;
-
-	dst = ft_strdup(str);
-	printf("After copied:\n%s\n", dst);
-	free (dst);
-} */

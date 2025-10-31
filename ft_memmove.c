@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:07:18 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/20 21:51:10 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:26:28 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*
-int	main(void)
-{
-	int	source[10] = {1,2,3,4,5,6,7,8,9,10};
-	int	destination[10];
-	int i;
-
-	ft_memmove(destination, source, sizeof(int) * 10);
-	
-	i = 0;
-	while (i < 10)
-	{
-		printf("destination[%d]=%d\n", i, destination[i]);
-		i++;
-	}
-	
-	return (0);
-}*/

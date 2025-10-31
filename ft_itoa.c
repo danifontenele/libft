@@ -6,16 +6,12 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:04:38 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/26 21:32:41 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:25:58 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Returns the number of characters needed to represent
- * the number passed as parameter.
- */
 static int	intlen(long nbr)
 {
 	int	count;
@@ -46,17 +42,6 @@ static char	*allocation(int len)
 	return (tmp);
 }
 
-/**
- * @brief Converts integer to ASCII.
- * 
- * Allocates memory and returns a string representing the
- * integer received as an argument. Negative numbers must
- * be handled.
- * 
- * @param n The integer to convert.
- * @return The string representing the integer. NULL if 
- * the allocation fails.
- */
 char	*ft_itoa(int n)
 {
 	char	*result;
@@ -85,10 +70,3 @@ char	*ft_itoa(int n)
 	result[len] = '\0';
 	return (result);
 }
-/* 
-int	main(void)
-{
-	char *str = ft_itoa(0);
-	printf("42: %s\n", str);
-	free (str);
-} */

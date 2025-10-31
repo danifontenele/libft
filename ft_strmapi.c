@@ -6,20 +6,12 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 19:46:03 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/26 21:28:25 by calvares         ###   ########.fr       */
+/*   Updated: 2025/10/30 16:28:06 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Applies a function to each character of string s.
- * 
- * @param s String to apply the function throught.
- * @param f Function to apply. Its first argument represents 
- * the index of the string and the second argument represents 
- * the character itself.
- */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
