@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 20:07:18 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/03 09:25:48 by danielalvar      ###   ########.fr       */
+/*   Created: 2025/11/03 08:56:56 by danielalvar       #+#    #+#             */
+/*   Updated: 2025/11/03 09:09:55 by danielalvar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+/**
+ * @brief Removes one element from the list.
+ * Removes the node passed as a parameter.
+ * Free the node itself, but does not free the next node.
+ * 
+ * @param lst The node to free.
+ * @param del The address of the function used to delete
+ * the content.
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	char	*tsrc;
-	char	*tdst;
-	size_t	i;
-
-	if (!dst && !src)
-		return (NULL);
-	tsrc = (char *)src;
-	tdst = (char *)dst;
-	i = 0;
-	if (tdst > tsrc)
-	{
-		while (len-- > 0)
-			tdst[len] = tsrc[len];
-	}
-	else
-	{
-		while (i++ < len)
-			tdst[i] = tsrc[i];
-	}
-	return (dst);
+	if (!lst)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }

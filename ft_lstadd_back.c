@@ -6,7 +6,7 @@
 /*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 01:03:57 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 01:55:46 by danielalvar      ###   ########.fr       */
+/*   Updated: 2025/11/02 15:20:14 by danielalvar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (*lst == NULL) // Caso seja uma lista vazia, adiciona-se o primeiro.
+	if (*lst == NULL)
 		*lst = new;
 	else
-		ft_lstlast(*lst)->next = new; // O ultimo no da lista agora recebe o endereço do novo no.
+		ft_lstlast(*lst)->next = new;
 }
 
 /* int	main(void)

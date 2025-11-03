@@ -6,7 +6,7 @@
 /*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 21:29:54 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 00:00:43 by danielalvar      ###   ########.fr       */
+/*   Updated: 2025/11/02 15:24:16 by danielalvar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
-	
+
 	new = malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);

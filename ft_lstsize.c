@@ -6,7 +6,7 @@
 /*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 00:36:00 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 01:11:35 by danielalvar      ###   ########.fr       */
+/*   Updated: 2025/11/02 15:22:48 by danielalvar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 int	ft_lstsize(t_list *lst)
 {
 	int	counter;
+
 	if (!lst)
 		return (0);
 	counter = 0;

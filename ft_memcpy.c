@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:07:02 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/30 16:26:20 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/02 22:20:04 by danielalvar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (src == NULL && dst == NULL)
+	if (!src && !dst)
 		return (NULL);
 	i = 0;
 	while (i < n)

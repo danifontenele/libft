@@ -6,7 +6,7 @@
 /*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 01:05:43 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 01:47:48 by danielalvar      ###   ########.fr       */
+/*   Updated: 2025/11/02 15:23:57 by danielalvar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_list	*ft_lstlast(t_list *lst)
 			return (tmp);
 		tmp = tmp->next;
 	}
-	return(NULL);
+	return (NULL);
 }
 
 /* int	main(void)

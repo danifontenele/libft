@@ -6,7 +6,7 @@
 /*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 23:11:47 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 00:37:32 by danielalvar      ###   ########.fr       */
+/*   Updated: 2025/11/02 15:20:41 by danielalvar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 /**
  * @brief set the node 'new' to the first element of the list.
  */
-void	ft_lstadd_front(t_list **lst, t_list *new) // **lst pointer to the content of the first element of the list.
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;
-	new->next = *lst; // O campo next passa a apontar para o antigo primeiro elemento da lista.
-	*lst = new; // Aqui lista o começo da lista recebe o novo primeiro elemento, apontado por new.
+	new->next = *lst;
+	*lst = new;
 }
 
 /* int	main(void)
