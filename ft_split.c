@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:16:22 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/31 19:32:58 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/06 21:24:34 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,15 +87,16 @@ char	**ft_split(const char *s, char sep)
 {
 	char	**splitted;
 	char	sep = (char) * av[2];
-	char	*s = av[1];
+	char	*str = av[1];
 
-	splitted = ft_split(s, sep);
+	splitted = ft_split(str, sep);
 	int	i = 0;
-	while (i < word_count(s, sep))
+	while (i < word_count(str, sep))
 	{
 		printf("%s\n", splitted[i]);
 		i++;
 	}
-	printf("number of words: %lu\n", word_count(s, sep));
+	printf("number of words: %lu\n", word_count(str, sep));
+	free (splitted);
 	return (0);
-}  */
+} */

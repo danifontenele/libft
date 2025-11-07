@@ -3,24 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
+/*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 21:29:54 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 15:24:16 by danielalvar      ###   ########.fr       */
+/*   Created: 2025/11/03 19:56:25 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/03 21:22:33 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief This function creates a node containing a content of any type.
- * 
- * This node contains 2 parts, one represents it's content, it can be by any type
- * the other part is a pointer to the next node, initialy NULL, but can be linked
- * using other functions.
- * 
- * @return Returns a pointer to the new node.
- */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
@@ -32,3 +23,11 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
+
+/* int	main(void)
+{
+	t_list	*node;
+	
+	node = ft_lstnew("Hey you, watch this!");
+	printf("%s\n", node->content);
+} */

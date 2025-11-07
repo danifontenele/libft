@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
+/*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/01 23:11:47 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 15:20:41 by danielalvar      ###   ########.fr       */
+/*   Created: 2025/11/03 20:05:03 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/03 20:09:31 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,4 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		blitzkrieg_bop = blitzkrieg_bop->next;
 	}
 	printf("\n");
-} */
+}*/

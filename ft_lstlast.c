@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
+/*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/02 01:05:43 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 15:23:57 by danielalvar      ###   ########.fr       */
+/*   Created: 2025/11/03 20:11:49 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/03 21:22:46 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

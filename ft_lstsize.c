@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
+/*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/02 00:36:00 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 15:22:48 by danielalvar      ###   ########.fr       */
+/*   Created: 2025/11/03 20:15:28 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/03 20:17:57 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

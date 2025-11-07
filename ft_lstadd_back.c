@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielalvares <danielalvares@student.42    +#+  +:+       +#+        */
+/*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/02 01:03:57 by danielalvar       #+#    #+#             */
-/*   Updated: 2025/11/02 15:20:14 by danielalvar      ###   ########.fr       */
+/*   Created: 2025/11/03 20:18:58 by calvares          #+#    #+#             */
+/*   Updated: 2025/11/04 21:27:01 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,26 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 /* int	main(void)
 {
-	t_list	*A = ft_lstnew("first node, ");
-	t_list	*B = ft_lstnew("second node.");
-	t_list	*list;
+	// Testando node vazio como argumento:
+	t_list	*lista1;
+	
+	lista1 = NULL;
+	ft_lstadd_back(&lista1, ft_lstnew(NULL));
+	printf("Teste1: Se node == NULL:\n");
+	printf("%s\n", (char *)lista1->content);
+	
+	// Criando uma lista valida:
+	t_list	*lista2;
 
-	list = NULL;
-	ft_lstadd_back(&list, A);
-	ft_lstadd_back(&list, B);
+	lista2 = NULL;
+	ft_lstadd_back(&lista2, ft_lstnew("first node, "));
+	ft_lstadd_back(&lista2, ft_lstnew("second node."));
 
-	while (list)
+	printf("Teste 3: Se tudo estiver nos conformes:\n");
+	while (lista2)
 	{
-		printf("%s", (char *)list->content);
-		list = list->next;
+		printf("%s", (char *)lista2->content);
+		lista2 = lista2->next;
 	}
 	printf("\n");
 } */
