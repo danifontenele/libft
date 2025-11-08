@@ -6,14 +6,14 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 20:55:03 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/07 01:00:16 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/08 19:41:24 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief fill a byte string 'b' and fill with 'len' byte value 'c's.
+ * @brief fill a byte string 'b' with 'n' byte value 'c's.
  * 
  * the ft_memset() can be used to set a whole block
  * of memory to a particular value.
@@ -21,11 +21,11 @@
  * @param b Address of the string that receives the
  * second argument.
  * @param c Bytes to be writen in b.
- * @param len Number of bytes to be considered.
+ * @param n Number of bytes to be considered.
  * 
  * @return Returns its first argument
  */
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t n)
 {
 	size_t	i;
 	char	*dest;
@@ -34,7 +34,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	tempc = (char)c;
 	dest = (char *)b;
 	i = 0;
-	while (i < len)
+	while (i < n)
 	{
 		dest[i] = tempc;
 		i++;

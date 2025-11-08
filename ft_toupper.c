@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:54:25 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/07 01:06:47 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/08 19:28:08 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,8 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
+
+/* int main(void)
+{
+	printf("%c\n", ft_toupper('z'));
+} */

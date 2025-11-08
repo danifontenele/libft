@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:26:26 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/06 21:15:22 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/08 19:40:38 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/* int main (void)
-{
-	ft_putchar_fd('!', 2); // Saida de erro.
-	ft_putchar_fd('\n', 1);
-} */

@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:30:46 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/07 00:57:23 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/08 19:11:10 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /* int main()
 {
 	char str[2];
-	str[0] = (char)128;
-	//test with 127
+	str[0] = 255;
 	str[1] = 0;
 	printf("%d\n", ft_memcmp(str, str+1, 1));
 	return 0;

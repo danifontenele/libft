@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:14:31 by calvares          #+#    #+#             */
-/*   Updated: 2025/10/21 20:53:02 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/08 19:39:14 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,10 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
+/* int main(void)
+{
+	char *str = "15 chars string";
+
+	printf("length: %zu\n", ft_strlen(str));
+} */

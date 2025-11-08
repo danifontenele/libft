@@ -6,7 +6,7 @@
 /*   By: calvares <calvares@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 01:22:04 by calvares          #+#    #+#             */
-/*   Updated: 2025/11/04 01:27:58 by calvares         ###   ########.fr       */
+/*   Updated: 2025/11/07 01:13:30 by calvares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (size == 0 || nmemb == 0)
 		return (malloc(0));
-	if (size != 0 && nmemb * size > SIZE_MAX)
+	if (size != 0 && nmemb > SIZE_MAX / size)
 		return (NULL);
 	ptr = (void *)malloc(nmemb * size);
 	if (!ptr)
